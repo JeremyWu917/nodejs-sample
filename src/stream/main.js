@@ -81,4 +81,7 @@ var zlib = require('zlib')
 // 压缩 text.txt 文件为 text.txt.gz 文件
 fs.createReadStream('text.txt').pipe(zlib.createGzip()).pipe(fs.createWriteStream('text.txt.gz'))
 
+// 解压 text.txt.gz 文件为 text.txt
+// fs.createReadStream('text.txt.gz').pipe(zlib.createGunzip()).pipe(fs.createWriteStream('text.txt'))
+
 console.log('done!')
